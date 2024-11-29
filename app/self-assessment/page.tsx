@@ -30,7 +30,7 @@ const questions = [
 ]
 
 export default function SelfAssessment() {
-    const [answers, setAnswers] = useState({})
+    const [answers, setAnswers] = useState<Record<number, string>>({})
     const [showResults, setShowResults] = useState(false)
 
     const handleAnswer = (questionId: number, value: string) => {
@@ -42,7 +42,9 @@ export default function SelfAssessment() {
     }
 
     const getResult = (): string => {
-        const total = Object.values(answers).reduce((sum, value) => sum + parseInt(value), 0)
+        // Ensure sum is a number by explicitly typing the accumulator
+        const total = Object.values(answers).reduce((sum: number, value: string) => sum + parseInt(value), 0)
+        
         if (total <= 4) return "Your symptoms suggest mild distress. Consider practicing self-care techniques."
         if (total <= 9) return "Your symptoms suggest moderate distress. Consider reaching out to a counselor."
         return "Your symptoms suggest severe distress. Please contact the crisis hotline or seek immediate help."
