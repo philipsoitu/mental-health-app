@@ -25,7 +25,7 @@ const LandingPage: NextPage = () => {
         </div>
       </div>
 
-      <Link href="/calendar" className="mt-8 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+      <Link href="/home" className="mt-8 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
         Continue to App
       </Link>
     </div>

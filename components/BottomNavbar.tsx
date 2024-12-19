@@ -1,10 +1,11 @@
 'use client'
 
-import { Calendar, Book, Brain, User } from 'lucide-react'
+import { Calendar, Book, Brain, User, Home } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
+    { icon: Home, label: 'Home', href: '/home' },
     { icon: Calendar, label: 'Calendar', href: '/calendar' },
     { icon: Book, label: 'Resources', href: '/resources' },
     { icon: Brain, label: 'Assessment', href: '/assessment' },

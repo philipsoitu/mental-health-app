@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import BottomNavbar from '../components/BottomNavbar'
+import LayoutClient from './LayoutClient'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,12 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <main className="flex-grow overflow-auto">
-          {children}
-        </main>
-        {/* Render BottomNavbar on all pages except the landing page */}
-        {typeof window !== 'undefined' && window.location.pathname !== '/' && <BottomNavbar />}
+      <body className={inter.className}>
+        <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
   )
