@@ -2,9 +2,11 @@ import type { NextPage } from 'next'
 
 const LoginPage: NextPage = () => {
   return (
-    <h1>
-        Log in
-    </h1>
+    <div>
+      <h1>
+          Log in
+      </h1>
+    </div>
   )
 }
 
