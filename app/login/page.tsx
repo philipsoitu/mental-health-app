@@ -2,21 +2,16 @@ import type { NextPage } from 'next'
 
 const LoginPage: NextPage = () => {
   return (
-    <div>
-      <h1>
-          Log in
-      </h1>
-      <form>
-        <label>
-          Email
-          <input type="email" />
-        </label>
-        <label>
-          Password
-          <input type="password" />
-        </label>
-        <button type="submit">Log in</button>
-      </form>
+    <div className="relative flex h-[calc(100vh-3rem)]">
+      {/* Left */}
+      <section className="relative hidden h-full w-1/2 bg-zinc-900 p-8 lg:block">
+        {/* Image */}
+      </section>
+      
+      {/* Right */}
+      <section className="flex w-full items-center justify-center p-16 lg:w-1/2">
+        <h1>Form here</h1>
+      </section>
     </div>
   )
 }
